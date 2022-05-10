@@ -7,7 +7,7 @@
 
 文章目录如下：
 
-![](http://124.221.134.51/BlogImage/openFeign/15.png)
+![](https://www.java-family.cn/BlogImage/openFeign/15.png)
 
 ## 2、Feign是什么？
 
@@ -15,7 +15,7 @@ Feign也是一个狠角色，Feign旨在使得Java Http客户端变得更容易�
 
 Feign集成了Ribbon、RestTemplate实现了负载均衡的执行Http调用，只不过对原有的方式（Ribbon+RestTemplate）进行了封装，开发者不必手动使用RestTemplate调服务，而是定义一个接口，在这个接口中标注一个注解即可完成服务调用，这样更加符合面向接口编程的宗旨，简化了开发。
 
-![](http://124.221.134.51/BlogImage/openFeign/1.png)
+![](https://www.java-family.cn/BlogImage/openFeign/1.png)
 
 但遗憾的是Feign现在停止迭代了，当然现在也是有不少企业在用。
 
@@ -43,7 +43,7 @@ Feign集成了Ribbon、RestTemplate实现了负载均衡的执行Http调用，�
 
 本篇文章搭建的项目结构如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/image.png)
+![](https://www.java-family.cn/BlogImage/openFeign/image.png)
 
 >  注册中心使用**Nacos**，创建个微服务，分别为服务提供者**Produce**，服务消费者**Consumer**。
 
@@ -205,7 +205,7 @@ public interface OpenFeignService {
 
 网上很多人疑惑POJO表单方式如何传参，官方文档明确给出了解决方案，如下：
 
-![](http://124.221.134.51/BlogImage/openFeign/3.png)
+![](https://www.java-family.cn/BlogImage/openFeign/3.png)
 
 openFeign提供了一个注解`@SpringQueryMap`完美解决POJO表单传参。
 
@@ -295,19 +295,19 @@ public String test2(String id,String name) throws InterruptedException {
 
 此时，我们调用consumer的openFeign接口返回结果如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/4.png)
+![](https://www.java-family.cn/BlogImage/openFeign/4.png)
 
 很明显的看出程序异常了，返回了接口调用超时。what？why？...........
 
 openFeign其实是有默认的超时时间的，默认分别是连接超时时间`10秒`、读超时时间`60秒`，源码在`feign.Request.Options#Options()`这个方法中，如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/5.png)
+![](https://www.java-family.cn/BlogImage/openFeign/5.png)
 
 那么问题来了：**为什么我只设置了睡眠3秒就报超时呢？**
 
 其实openFeign集成了Ribbon，Ribbon的默认超时连接时间、读超时时间都是是1秒，源码在`org.springframework.cloud.openfeign.ribbon.FeignLoadBalancer#execute()`方法中，如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/6.png)
+![](https://www.java-family.cn/BlogImage/openFeign/6.png)
 
 **源码大致意思**：如果openFeign没有设置对应得超时时间，那么将会采用Ribbon的默认超时时间。
 
@@ -346,7 +346,7 @@ feign:
 
 但是正常的业务逻辑中可能涉及到多个openFeign接口的调用，如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/7.png)
+![](https://www.java-family.cn/BlogImage/openFeign/7.png)
 
 
 
@@ -402,7 +402,7 @@ openFeign的日志级别如下：
 
 需要自定义一个配置类，在其中设置日志级别，如下：
 
-![](http://124.221.134.51/BlogImage/openFeign/8.png)
+![](https://www.java-family.cn/BlogImage/openFeign/8.png)
 
 >  **注意**：这里的logger是feign包里的。
 
@@ -422,7 +422,7 @@ logging:
 
 上述步骤将日志设置成了`FULL`，此时发出请求，日志效果如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/9.png)
+![](https://www.java-family.cn/BlogImage/openFeign/9.png)
 
 日志中详细的打印出了请求头、请求体的内容。
 
@@ -458,7 +458,7 @@ Feign在默认情况下使用的是JDK原生的**URLConnection**发送HTTP请求
 
 为什么要添加上面的依赖呢？从源码中不难看出，请看`org.springframework.cloud.openfeign.FeignAutoConfiguration.HttpClientFeignConfiguration`这个类，代码如下：
 
-![](http://124.221.134.51/BlogImage/openFeign/10.png)
+![](https://www.java-family.cn/BlogImage/openFeign/10.png)
 
 上述红色框中的生成条件，其中的`@ConditionalOnClass(ApacheHttpClient.class)`，必须要有`ApacheHttpClient`这个类才会生效，并且`feign.httpclient.enabled`这个配置要设置为`true`。
 
@@ -478,7 +478,7 @@ feign:
 
 其实很简单，在`feign.SynchronousMethodHandler#executeAndDecode()`这个方法中可以清楚的看出调用哪个client，如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/11.png)
+![](https://www.java-family.cn/BlogImage/openFeign/11.png)
 
 上图中可以看到最终调用的是`ApacheHttpClient`。
 
@@ -502,7 +502,7 @@ feign:
 
 GZIP压缩传输的原理如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/13.png)
+![](https://www.java-family.cn/BlogImage/openFeign/13.png)
 
 按照上图拆解出的步骤如下：
 
@@ -512,7 +512,7 @@ GZIP压缩传输的原理如下图：
 
 openFeign支持**请求/响应**开启GZIP压缩，整体的流程如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/12.png)
+![](https://www.java-family.cn/BlogImage/openFeign/12.png)
 
 上图中涉及到GZIP传输的只有两块，分别是**Application client -> Application Service**、 **Application Service->Application client**。
 
@@ -535,7 +535,7 @@ feign:
 
 上述配置完成之后，发出请求，可以清楚看到请求头中已经携带了GZIP压缩，如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/14.png)
+![](https://www.java-family.cn/BlogImage/openFeign/14.png)
 
 
 
@@ -572,7 +572,7 @@ feign:
 
 这个类一定要和openFeign接口实现同一个类，如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/16.png)
+![](https://www.java-family.cn/BlogImage/openFeign/16.png)
 
 `OpenFeignFallbackService`这个是降级回调的类，一旦`OpenFeignService`中对应得接口出现了异常则会调用这个类中对应得方法进行降级处理。
 
@@ -591,15 +591,15 @@ public interface OpenFeignService {}
 
 通过postman调用`http://localhost:9006/openfeign/order3`这个接口，正常逻辑返回如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/17.png)
+![](https://www.java-family.cn/BlogImage/openFeign/17.png)
 
 现在手动造个异常，在服务提供的接口中抛出异常，如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/18.png)
+![](https://www.java-family.cn/BlogImage/openFeign/18.png)
 
 此时重新调用`http://localhost:9006/openfeign/order3`，返回如下图：
 
-![](http://124.221.134.51/BlogImage/openFeign/19.png)
+![](https://www.java-family.cn/BlogImage/openFeign/19.png)
 
 哦豁，可以很清楚的看到服务已经成功降级调用，哦了，功能完成。
 

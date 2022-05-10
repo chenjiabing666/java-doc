@@ -1,32 +1,16 @@
 # Nacos 入门
-
-这是[《Spring Cloud 进阶》](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU3MDAzNDg1MA==&action=getalbum&album_id=2042874937312346114&scene=126#wechat_redirect)**第1篇**文章，往期文章如下：
-
-- [五十五张图告诉你微服务的灵魂摆渡者Nacos究竟有多强？](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247493854&idx=1&sn=4b3fb7f7e17a76000733899f511ef915&scene=21#wechat_redirect)
-- [openFeign夺命连环9问，这谁受得了？](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247496653&idx=1&sn=7185077b3bdc1d094aef645d677ec472&scene=21#wechat_redirect)
-- [阿里面试这样问：Nacos、Apollo、Config配置中心如何选型？这10个维度告诉你！](https://mp.weixin.qq.com/s/S_8HQYHOG624Vzeu94CFSA)
-- [阿里面试败北：5种微服务注册中心如何选型？这几个维度告诉你！](https://mp.weixin.qq.com/s/YKzYdMu-7nwszEf9-1M3Uw)
-- [阿里限流神器Sentinel夺命连环 17 问？](https://mp.weixin.qq.com/s/Q7Xv8cypQFrrOQhbd9BOXw)
-- [对比7种分布式事务方案，还是偏爱阿里开源的Seata，真香！(原理+实战)](https://mp.weixin.qq.com/s/sXVSFqq2UZ6Pwwt7vx7vIA)
-- [Spring Cloud Gateway夺命连环10问？](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247499894&idx=1&sn=f1606e4c00fd15292269afe052f5bca2&chksm=fcf71fbbcb8096ad349e6da50b0b9141964c2084d0a38eba977fe8baa3fbe8af3b20c7591110&token=1887105114&lang=zh_CN#rd)
-- [Spring Cloud Gateway 整合阿里 Sentinel网关限流实战！](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247500540&idx=1&sn=2967bf1f9fa2c4d5b94b7fe291b7869b&chksm=fcf71d31cb8094271b5bbeca85cc03cf7d7c8bbf7c4d5b83a539e39c956e3f4015f91e7742b6&token=2077958771&lang=zh_CN#rd)
-- [分布式链路追踪之Spring Cloud Sleuth夺命连环9问？](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247500757&idx=1&sn=ef71f10d5736029c92287f7894c842ed&chksm=fcf71c18cb80950ec3144d66957a9d2914b51b8af22cf59a1ca3f9e2b561a11aca359d50d5a1&token=498818367&lang=zh_CN#rd)
-- [链路追踪自从用了SkyWalking，睡的真香！](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247501079&idx=1&sn=438ef3a3d65fb4919b61cf6972827bec&chksm=fcf71adacb8093ccc4c3d6dfb8860ca07aefbc761c1ed5126eb4a4e87548441841198db1f8e3&token=404376711&lang=zh_CN#rd)
-- [3本书了，7万+字，10篇文章，《Spring Cloud 进阶》基础版 PDF](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247501590&idx=1&sn=149d1498504cda7cc391413f14cda9c2&chksm=fcf718dbcb8091cd6907e86e148216bae0a2d5b1664b1e8cc2d3e2c96c38181cc778de5711b6&token=404376711&lang=zh_CN#rd)
-
 ## 前言
-
 Nacos是阿里巴巴开源的服务注册中心以及配置中心，致力于给开发者提供一款便捷、简单上手的开源框架。
 
 Nacos究竟有什么惊人的地方呢？看下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/1.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/1.png)
 
 从上图不难看出阿里巴巴的野心，一个Nacos干掉了Spring Cloud的三大组件，分别是`注册中心Eureka`、`服务配置Config`，`服务总线Bus`。
 
 本文目录结构如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/53.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/53.png)
 
 ## 为什么Nacos这么受欢迎？
 
@@ -66,11 +50,11 @@ Nacos官方文档的介绍中有这么一句话，如下：
 
 **注意**：Spring Boot、Spring Cloud、Spring Cloud Alibaba的版本可不是随便选择的，官网明确规定了各个版本的适配：https://github.com/alibaba/spring-cloud-alibaba/wiki，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/2.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/2.png)
 
 不同版本的Alibaba也对应了不同组件的版本，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/3.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/3.png)
 
 > 一定要完全按照文档给出的版本来选择，不然会出现意想不到的BUG，那岂不是鸡鸡....
 
@@ -78,7 +62,7 @@ Nacos官方文档的介绍中有这么一句话，如下：
 
 作者使用的是分模块的聚合项目演示，其中`dependencyManagement`依赖如下，对应着上文提到的版本：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/7.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/7.png)
 
 > 注意：如果你的版本的不是和作者一样，请一定严格按照官方文档给的版本进行适配，否则会有意想不到的BUG....
 
@@ -86,7 +70,7 @@ Nacos官方文档的介绍中有这么一句话，如下：
 
 根据上面作者选择的Spring Cloud Alibaba的版本，对应的Nacos版本是`1.2.1`，直接去GitHub(https://github.com/alibaba/nacos/tags)下载对应的版本即可，可以选择windows或者Linux，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/4.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/4.png)
 
 下载完成之后直接解压即可，从它的目录结构和文件名称一看这就是一个Spring Boot 项目。
 
@@ -96,7 +80,7 @@ Nacos官方文档的介绍中有这么一句话，如下：
 
 由于作者本地是windows，直接双击`startup.cmd`启动项目，出现以下界面则启动完成：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/5.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/5.png)
 
 在浏览器输入`http://localhost:8848/nacos`进入Nacos的登录界面。
 
@@ -104,7 +88,7 @@ Nacos官方文档的介绍中有这么一句话，如下：
 
 登录成功的界面如下：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/6.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/6.png)
 
 
 
@@ -112,7 +96,7 @@ Nacos官方文档的介绍中有这么一句话，如下：
 
 微服务的服务注册和发现相信都用过Eureka，要自己本地构建一个Eureka微服务，但是整合了Alibaba的Nacos则不用那么复杂，直接启动Alibaba提供的Nacos服务即可，这样让程序员把全部精力放在业务上，下面是一个简单的架构图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/8.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/8.png)
 
 
 
@@ -133,7 +117,7 @@ Nacos官方文档的介绍中有这么一句话，如下：
 
 需要添加`spring-cloud-starter-alibaba-nacos-discovery`这个依赖，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/9.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/9.png)
 
 由于父模板中指定了`spring-cloud-alibaba-dependencies`的版本，子模块中直接引入依赖即可，不需要指定版本号，这样才能达到版本管理的效果。
 
@@ -165,7 +149,7 @@ management:
 
 这个大部分Spring Boot功能模块相同，都需要使用`@EnableXxxx`注解来开启某个功能，否则无法引入自动配置。这里需要使用Spring Cloud的原生注解`@EnableDiscoveryClient`来开启服务注册发现的功能，如下：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/10.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/10.png)
 
 
 
@@ -173,7 +157,7 @@ management:
 
 nacos-provider作为服务提供者注册到nacos中，肯定需要提供个服务来供消费者（nacos-consumer）调用，下面是随便写的一个接口：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/11.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/11.png)
 
 
 
@@ -183,7 +167,7 @@ nacos-provider作为服务提供者注册到nacos中，肯定需要提供个服�
 
 启动成功之后在nacos的服务管理->服务列表这里将会发现注册进入的nacos-provider这个服务，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/12.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/12.png)
 
 OK，在nacos中能够看到服务注册成功了，完成任务..........
 
@@ -197,7 +181,7 @@ OK，在nacos中能够看到服务注册成功了，完成任务..........
 
 需要添加`spring-cloud-starter-alibaba-nacos-discovery`这个依赖，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/9.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/9.png)
 
 
 
@@ -228,7 +212,7 @@ management:
 
 使用`@EnableDiscoveryClient`标注，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/13.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/13.png)
 
 
 
@@ -238,7 +222,7 @@ management:
 
 其实Nacos集成了Ribbon，何以见得呢？打开`spring-cloud-starter-alibaba-nacos-discovery`的依赖一看便知，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/14.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/14.png)
 
 
 
@@ -246,15 +230,15 @@ management:
 
 - 创建RestTemplate，使用`@LoadBalanced`注解标注开启负载均衡，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/15.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/15.png)
 
 - 直接使用注册到nacos的中的服务名作为访问地址调用服务，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/16.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/16.png)
 
 - 上图中的`serviceUrl`是什么东西呢？难道是IP地址？当然不是，既然nacos-provider和nacos-consumer都已经注册到nacos中，那么可能是可以直接通过服务名直接找到对应得服务，因此这个`serviceUrl=http://service-name`，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/17.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/17.png)
 
 OK，至此nacos-consumer已经准备完成，下面就可以启动项目。
 
@@ -264,7 +248,7 @@ OK，至此nacos-consumer已经准备完成，下面就可以启动项目。
 
 启动成功之后将会在nacos中的服务列表中查看到两个服务，分别是nacos-provider、nacos-consumer，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/18.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/18.png)
 
 
 
@@ -272,7 +256,7 @@ OK，至此nacos-consumer已经准备完成，下面就可以启动项目。
 
 直接调用nacos-consumer的接口，输入地址：`http://localhost:9002/nacos/test/16`，返回信息如下图则表示相互调用成功：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/19.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/19.png)
 
 ### 总结
 
@@ -290,7 +274,7 @@ Nacos的服务注册发现很简单，比Eureka简单多了，无需自己构建
 
 这都不是今天的重点，用过Config+BUS觉得怎么样？自己要搭建一个Config微服务，还要集成GitHub等，你不难受吗？
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/20.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/20.png)
 
 下面就来介绍一下Nacos是如何完美的实现配置管理以及动态刷新的。
 
@@ -300,13 +284,13 @@ Nacos的服务注册发现很简单，比Eureka简单多了，无需自己构建
 
 新建一个模块`nacos-config`用来整合Nacos实现配置管理，项目结构如下：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/21.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/21.png)
 
 
 
 Nacos配置列表在哪里能看到呢？在管理平台->配置管理->配置列表这一栏，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/22.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/22.png)
 
 
 
@@ -365,11 +349,11 @@ ${prefix}-${spring.profiles.active}.${file-extension}
 
 下面在nacos中添加一个`config.version`的配置，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/23.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/23.png)
 
 以上就是添加的`config.version`的配置，发布之后查看列表如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/24.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/24.png)
 
 
 
@@ -410,7 +394,7 @@ public class NacosController {
 
 运行项目成功后，在浏览器输入地址：http://localhost:9003/nacos/test/1，返回如下结果：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/25.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/25.png)
 
 结果很明显，Nacos中的配置生效了，是不是很简单？
 
@@ -420,11 +404,11 @@ public class NacosController {
 
 不妨试一下，直接将Nacos中的配置修改成2，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/26.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/26.png)
 
 此时我们再不重启项目的情况下访问：http://localhost:9003/nacos/test/1，结果如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/25.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/25.png)
 
 
 
@@ -446,7 +430,7 @@ public class DynamicConfigEntity {
 
 此时加上`@RefreshScope`重启之后将Nacos中`config.version`这个配置改成3，然后访问http://localhost:9003/nacos/test/1，结果如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/27.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/27.png)
 
 
 
@@ -473,19 +457,19 @@ public class DynamicConfigEntity {
 
 Nacos中默认提供的命名空间则是`public`，上述我们创建的`config.version`这个配置就属于`public`这个命名空间，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/28.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/28.png)
 
 
 
 当然我们可以根据业务需要创建自己的命名空间，操作如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/29.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/29.png)
 
 
 
 陈某创建了三个，分别是dev、test、prod，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/30.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/30.png)
 
 
 
@@ -493,7 +477,7 @@ Nacos中默认提供的命名空间则是`public`，上述我们创建的`config
 
 创建完成之后，在配置列表上方则可以看见不同的命名空间，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/31.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/31.png)
 
 
 
@@ -503,7 +487,7 @@ Nacos中默认提供的命名空间则是`public`，上述我们创建的`config
 
 其实很简单，假设在`test`这个命名空间中添加一个`config.version=4`，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/32.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/32.png)
 
 
 
@@ -524,7 +508,7 @@ spring:
 
 至此，已经全部配置完毕，启动项目，浏览器访问http://localhost:9003/nacos/test/1，结果如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/33.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/33.png)
 
 
 
@@ -540,11 +524,11 @@ spring:
 
 下面在Nacos中新建一个`config.version=5`，命名空间为`test`，分组为`ORDER_GROUP`，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/34.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/34.png)
 
 此时命名空间`test`中的配置如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/36.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/36.png)
 
 
 
@@ -567,7 +551,7 @@ spring:
 
 至此，已经全部配置完毕，启动项目，浏览器访问http://localhost:9003/nacos/test/1，结果如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/35.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/35.png)
 
 
 
@@ -593,7 +577,7 @@ Nacos的共享配置能够完美的解决上述问题，配置起来也是很简
 
 陈某这里演示两个共享配置，`DataId`分别是`share-config1.properties`，`share-config2.properties`，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/43.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/43.png)
 
 > 注意：`DataId`一定要带有后缀`properties`或者`yml`
 
@@ -678,7 +662,7 @@ public class DynamicConfigEntity {
 
 上面配置完毕，启动nacos-config-share这个项目，访问：http://localhost:9003/nacos/test/1，结果如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/44.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/44.png)
 
 动态刷新配置这里就不再演示了，自己动手玩一下......
 
@@ -690,7 +674,7 @@ public class DynamicConfigEntity {
 
 其实Nacos默认使用的是内嵌的数据库`Derby`，这个在Nacos-server文件下的`/data`目录下就可以验证，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/37.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/37.png)
 
 那么问题来了，这些配置如何用自己的数据库存储呢？
 
@@ -700,11 +684,11 @@ public class DynamicConfigEntity {
 
 首先在Mysql中新建一个数据库`nacos-config`（名称随意），然后执行Nacos中的SQL脚本，该脚本是Nacos-server文件夹中的`nacos-mysql.sql`，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/38.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/38.png)
 
 执行该脚本，将会自动创建表，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/39.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/39.png)
 
 ### 修改配置文件
 
@@ -712,19 +696,19 @@ Nacos-server也是一个Spring Boot 项目，想要连接自己的数据库，�
 
 配置文件同样在Nacos-server中的conf目录下，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/40.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/40.png)
 
 
 
 只需要将`application.properties`中的Mysql配置取消注释并且配置好自己的数据源即可，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/41.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/41.png)
 
 修改完毕，重新启动Nacos-server。
 
 如何验证是否持久化呢？很简单，只需要创建一个配置，然后在`his_config_info`表中查看下是否存在即可，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/42.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/42.png)
 
 
 
@@ -736,13 +720,13 @@ Nacos推荐集群模式部署，这样可以避免单点故障，那么如何搭
 
 话不多说，偷一张官网的架构图，如下：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/45.jpg)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/45.jpg)
 
 
 
 上图什么意思呢？说实话，这文档写的真不咋的，很多除初学者一看就懵，请看陈某的架构图，如下：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/46.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/46.png)
 
 看了陈某画的图是不是更清楚了呢？请求进来先共同Nginx集群进行转发到Nacos集群中，当然为了保持高可用，数据库必须也是集群模式。
 
@@ -754,7 +738,7 @@ Nacos官方推荐Linux下搭建集群模式，因此陈某尝试在Linux环境�
 
 找到后缀为`tar.gz`的文件下载，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/47.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/47.png)
 
 
 
@@ -768,13 +752,13 @@ Nacos官方推荐Linux下搭建集群模式，因此陈某尝试在Linux环境�
 
 Nacos默认的端口号是8848，那么如何修改端口呢？只需要修改`conf`目录下的`application.properties`中的`server.port`即可，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/48.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/48.png)
 
 #### 修改集群配置
 
 那么如何配置集群呢？在`conf`目录下有一个`cluster.conf.example`文件，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/49.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/49.png)
 
 只需要将`cluster.conf.example`这个文件复制一份为`cluster.conf`放在`conf`目录下，其中配置的内容如下：
 
@@ -790,7 +774,7 @@ Nacos默认的端口号是8848，那么如何修改端口呢？只需要修改`c
 
 这个在持久化的那里已经讲过了，只需要将`application.properties`中的数据源替换掉，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/50.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/50.png)
 
 
 
@@ -804,7 +788,7 @@ bash -f ./startup.sh
 
 启动成功，访问任意一个端口的Nacos服务，在`集群管理->节点列表`中将会看到自己搭建的三个节点，如下图：
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/51.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/51.png)
 
 至此，Nacos集群算是搭建完成了......
 
@@ -881,7 +865,7 @@ Nacos集群搭建非常简单，唯一的配置就是`cluster.conf`中设置三�
 
 一般分布式系统中，肯定是优先保证P，剩下的就是C和A的取舍。
 
-![](http://124.221.134.51/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/52.png)
+![](https://www.java-family.cn/BlogImage/Nacos%E4%BB%8B%E7%BB%8D/52.png)
 
 当然不同的注册中心遵循的CAP也是不同的，如下：
 
