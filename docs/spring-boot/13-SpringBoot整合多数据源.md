@@ -317,8 +317,8 @@ public @interface SwitchSource {
 有注解还不行，当然还要有切面，代码如下：
 ```java
 @Aspect
-//优先级设置到最高
-@Order(Ordered.HIGHEST_PRECEDENCE)
+//优先级要设置在事务切面执行之前
+@Order(1)
 @Component
 @Slf4j
 public class DataSourceAspect {
@@ -367,6 +367,7 @@ public class DataSourceAspect {
     public SqlSessionFactory sqlSessionFactoryBean(DynamicDataSource dynamicDataSource) throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dynamicDataSource);
+        sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:/mapper/**/*.xml"));
         org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
         configuration.setMapUnderscoreToCamelCase(true);
         configuration.setDefaultFetchSize(100);

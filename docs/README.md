@@ -5,7 +5,9 @@
 - [《Spring Cloud 进阶》](spring-cloud/README.md)
 - [《Spring Boot 进阶》](spring-boot/README.md)
 - [《Mybatis 进阶》](Mybatis/README.md)
+- [《ShardingSphere 进阶》](ShardingSphere/README.md)
 - [《OAuth2.0》](OAuth2.0/README.md)
+
 
 # 原创书籍
 陈某目前原创了三本书籍，如下：
