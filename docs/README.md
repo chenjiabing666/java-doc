@@ -7,6 +7,8 @@
 - [《Mybatis 进阶》](Mybatis/README.md)
 - [《ShardingSphere 进阶》](ShardingSphere/README.md)
 - [《OAuth2.0》](OAuth2.0/README.md)
+- [《分布式 进阶》](distributed/README.md)
+
 
 
 # 原创书籍
