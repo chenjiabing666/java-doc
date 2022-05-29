@@ -61,4 +61,5 @@
 
 ## 源码分析
 * [01 openFeign如何做到隔空取物](spring-cloud/openFeign如何做到隔空取物.md)
+* [02 Nacos配置中心交互模型是 push 还是 pull ？](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247498111&idx=1&sn=ed64ab766a0b3b9b80121b8940e6ff73&chksm=fcf726b2cb80afa4a11913a4152301a9691027c69bb93174b0b7312382180454736879938bd0&token=651972823&lang=zh_CN#rd)
 
