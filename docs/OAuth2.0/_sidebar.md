@@ -9,3 +9,5 @@
     * [08 JWT令牌注销失效](OAuth2.0/08-无状态的JWT如何注销失效？.md)
     * [09 Spring Cloud Gateway集成 RBAC 权限模型实现动态权限控制！](OAuth2.0/09-Spring-Cloud-Gateway集成RBAC权限模型实现动态权限控制！.md)
     * [10 Spring Cloud Security实现 JWT 增强！](OAuth2.0/10-OAuth2.0-JWT增强！.md)
+    * [11 3个注解实现微服务鉴权](OAuth2.0/三个注解实现微服务鉴权.md)
+    * [12 使用阿里开源的TTL实现身份认证信息线程间复用](OAuth2.0/TransmittableThreadLocal.md)

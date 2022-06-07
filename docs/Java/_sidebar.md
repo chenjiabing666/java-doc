@@ -8,4 +8,5 @@
 * [08 聊聊 ForkJoinPool](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247509062&idx=1&sn=5f4648a22c2708cfbf928ca1aa44098e&chksm=fcf77b8bcb80f29d9a2bfa36f6ed4f51548c2edb9137e0e9153da7012bec33de250c215be6ed&token=651972823&lang=zh_CN#rd)
 * [09 聊聊AQS](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247508100&idx=1&sn=e91b3f373ce9b2f23a9768f1e9fc5fb8&chksm=fcf77f49cb80f65fac8ec9f89e346a7419f18094c6632773157018b04cdc5c3a84902f8e32e4&token=651972823&lang=zh_CN#rd)
 * [10 聊聊 Java泛型通配符 T，E，K，V，?](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247499489&idx=1&sn=86efa12652acf390019ddfa0d4c39300&chksm=fcf7212ccb80a83ac1242436db39ecd7c7f775d47bb3f9221627e5a16ab22081bd62337c81c9&token=651972823&lang=zh_CN#rd)
+* [11 聊聊 Java SPI 机制](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247511021&idx=1&sn=2a1b394387970210fe449193ca6535d7&chksm=fcf77420cb80fd367124c35cae6b0150cd2e75c9f26fee583f921f335168d659f971df0dec59&token=2067906125&lang=zh_CN#rd)
 

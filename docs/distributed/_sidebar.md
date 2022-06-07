@@ -11,3 +11,6 @@
 * 分布式任务调度系统
     * [聊聊分布式任务调度系统](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247509138&idx=1&sn=213b1855fb1832587d39844cbe42a49f&chksm=fcf77b5fcb80f249c1b5281b27a7b6908397d2c7666db494898a248f430ba1e13761a384e744&token=201261640&lang=zh_CN#rd)
     * [聊聊分布式任务调度框架xxl-job](distributed/xxl-job.md)
+
+* 分布式算法
+    * [聊聊 分布式一致性算法协议 Paxos](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247512703&idx=1&sn=f9c9d4a2fdcfbbffa8f71518b2a8880a&chksm=fcf76db2cb80e4a45beb14947a1918ba7e18e9033561c2e6aa1827d5e8e1fbb2e61a5c40aeae&token=2067906125&lang=zh_CN#rd)

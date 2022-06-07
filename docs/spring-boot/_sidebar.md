@@ -37,6 +37,7 @@
     * [36 Spring Boot 青睐的数据库连接池HikariCP为什么是史上最快的？](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247492953&idx=1&sn=0a74e548015d2e5d5e48e4e9a6086be3&chksm=fcf73a94cb80b382e23b6fb645dc88a5d8154073d89228aaca896ed5b8535a0363815a280251&scene=178&cur_album_id=1532834475389288449#rd)
     * [37 Spring Boot 中实现通用Auth认证，有哪几种方式？](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247491559&idx=1&sn=e0c00d469c195b341d1538bc392285f2&chksm=fcf4c02acb83493c4b5e25500ab73c3a2d316c5f6be64bb05e2b19249ac4600d50816955570e&scene=178&cur_album_id=1532834475389288449#rd)
     * [38 如何使用 Arthas 定位 Spring Boot 接口超时](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247489751&idx=1&sn=56b635cadc0a7eaa1abf565d93cd483d&chksm=fcf4c71acb834e0cafad7e835628a444aa7266a96a980dbb8418b1b2e50697cecf25a007dd54&scene=178&cur_album_id=1532834475389288449#rd)
+    * [39 一个依赖搞定 Spring Boot 接口防盗刷](https://mp.weixin.qq.com/s?__biz=MzU3MDAzNDg1MA==&mid=2247512732&idx=1&sn=fc310e107b31c278eb4f664e964a2bb7&chksm=fcf76d51cb80e447e6a1387817939f05290def81ef0c665e17fd945424cd1764cc7518e51486&token=2067906125&lang=zh_CN#rd)
 * 源码
     * [01 启动过程源码分析](spring-boot/21-启动过程源码分析.md)
     * [02 自定义starter.md](spring-boot/22-自定义启动器.md)
