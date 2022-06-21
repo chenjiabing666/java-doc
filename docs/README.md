@@ -1,5 +1,6 @@
-# 付费专栏
-- [《Spring Cloud Alibaba 实战》](Spring-Cloud-Alibaba实战/Spring-Cloud-Alibaba实战.md)
+# 付费视频专栏
+- [《Spring Cloud Alibaba 实战》](pay/Spring-Cloud-Alibaba实战.md)
+- [《亿级数据分库分表实战》](pay/分库分表实战.md)
 
 ## 推荐阅读
 - [《Spring Cloud 进阶》](spring-cloud/README.md)

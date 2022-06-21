@@ -31,6 +31,9 @@
     * [10 Spring Cloud Security实现 JWT 增强！](OAuth2.0/10-OAuth2.0-JWT增强！.md)
     * [11 3个注解实现微服务鉴权](OAuth2.0/三个注解实现微服务鉴权.md)
     * [12 使用阿里开源的TTL实现身份认证信息线程间复用](OAuth2.0/TransmittableThreadLocal.md)
+    * [13 Spring Cloud OAuth2.0 自定义授权模式](OAuth2.0/Spring-Cloud-OAuth2-自定义授权模式.md)
+    * [14 Spring Cloud OAuth2.0 优雅的自定义token返回格式](OAuth2.0/Spring-Security-OAuth2.0-自定义token返回格式.md)
+
 
 * 日志收集
     * [01 ELK 日志收集](spring-cloud/ELK日志搭建.md)

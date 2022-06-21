@@ -8,9 +8,9 @@
 [![stars](https://badgen.net/github/stars/Q-Angelo/Nodejs-Roadmap?icon=github&color=4ab8a1)](https://github.com/chenjiabing666/JavaFamily) [![forks](https://badgen.net/github/forks/Q-Angelo/Nodejs-Roadmap?icon=github&color=4ab8a1)](https://github.com/chenjiabing666/JavaFamily)
 
 [GitHub](<https://github.com/chenjiabing666/JavaFamily>)
-[知识星球:accept:](https://github.com/chenjiabing666/JavaFamily)
+[知识星球:accept:](知识星球.md)
 [哔哩哔哩:arrow_upper_right:](https://space.bilibili.com/60717546)
-[付费专栏:+1:](Spring-Cloud-Alibaba实战/Spring-Cloud-Alibaba实战.md)
+[付费视频专栏:+1:](pay/README.md)
 [开始阅读](README.md)
 
 
